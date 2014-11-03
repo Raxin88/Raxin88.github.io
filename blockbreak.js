@@ -2,6 +2,7 @@ $(function() {
   var Q = window.Q = Quintus()
                      .include('Audio,Input,Sprites,Scenes,UI')
                      .setup();
+  Q.enableSound();
   
 
   Q.input.keyboardControls();
@@ -66,17 +67,17 @@ $(function() {
 		  if(p.x < 0) { 
 			p.x = 0;
 			p.dx = 1;
-                        Q.audio.play("16295__ltibbits__rim4-tom-16.mp3");
+                        Q.audio.play('16295__ltibbits__rim4-tom-16.mp3');
 		  } else if(p.x > Q.width - p.w) { 
 			p.dx = -1;
 			p.x = Q.width - p.w;
-                        Q.audio.play("16295__ltibbits__rim4-tom-16.mp3");
+                        Q.audio.play('16295__ltibbits__rim4-tom-16.mp3');
 		  }
 
 		  if(p.y < 0) {
 			p.y = 0;
 			p.dy = 1;
-                        Q.audio.play("16295__ltibbits__rim4-tom-16.mp3");
+                        Q.audio.play('16295__ltibbits__rim4-tom-16.mp3');
 		  } else if(p.y > Q.height) { 
 			this.p.lives -= 1;
                         Q.stageScene('hud', 3, this.p);
@@ -216,7 +217,6 @@ $(function() {
       }
       stage.on('removeBlock',function() {
         blockCount--;
-        Q.audio.play("16292__ltibbits__rim1-snare.mp3");
         if(blockCount == 0) {
           Q.stageScene("winMenu");
         }
