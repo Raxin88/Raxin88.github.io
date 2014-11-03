@@ -234,6 +234,5 @@ $(function() {
 
     }));
     Q.stageScene("mainMenu");
-    Q.stageScene('hud', 3, Q('Ball').first().p);
   });  
 });
