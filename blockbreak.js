@@ -2,7 +2,7 @@ $(function() {
   var Q = window.Q = Quintus()
                      .include('Audio,Input,Sprites,Scenes,UI')
                      .setup();
-  Q.enableSound();
+  
 
   Q.input.keyboardControls();
   Q.input.touchControls({ 
