@@ -9,17 +9,6 @@ $(function() {
             controls:  [ ['left','<' ],[],[],[],['right','>' ] ]
   });
   
-  Q.enableSound = function() {
-    var hasTouch =  !!('ontouchstart' in window);
-
-    if(Q.hasWebAudio) {
-      Q.audio.enableWebAudioSound();
-    } else {
-      Q.audio.enableHTML5Sound();
-    }
-    return Q;
-  };
-  
   
 
 
