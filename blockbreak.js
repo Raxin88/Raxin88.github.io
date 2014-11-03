@@ -65,8 +65,8 @@ $(function() {
   });
 
   Q.Sprite.extend("Ball", {
-    init: function() {
-      this._super({
+    init: function(p) {
+      this._super(p,{
         sheet: 'ball',
         speed: 200,
         dx: 1,
