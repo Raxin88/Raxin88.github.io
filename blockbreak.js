@@ -3,18 +3,6 @@ $(function() {
                      .include('Audio,Input,Sprites,Scenes,UI')
                      .setup();
   Q.enableSound();
-  
-  function goHTML5Audio() {
-    Q.assets = {};
-    Q.audio.enableHTML5Sound();
-    loadAssetsAndGo();
-  }
-
-  function goWebAudio() {
-    Q.assets = [];
-    Q.audio.enableWebAudioSound();
-    loadAssetsAndGo();
-  }
 
   Q.input.keyboardControls();
   Q.input.touchControls({ 
@@ -126,6 +114,10 @@ $(function() {
 			this.p.dy *= -1;
                         this.p.score += 100;
                         Q.stageScene('hud', 3, this.p);
+                        if(this.p.score == 3000){
+                            Q.stageScene('winMenu');
+                            Q.clearStage(3);
+                        }
 		}
 	}
   });
