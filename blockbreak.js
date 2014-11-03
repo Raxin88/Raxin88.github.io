@@ -110,6 +110,7 @@ $(function() {
                         Q.audio.play("16287__ltibbits__kick-high-vol.mp3");
 		} else if (col.obj.isA("Block")) {
 //			alert("collision with block");
+                        Q.audio.play("16292__ltibbits__rim1-snare.mp3");
 			col.obj.destroy();
 			this.p.dy *= -1;
                         this.p.score += 100;
